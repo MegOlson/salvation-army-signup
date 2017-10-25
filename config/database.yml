@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: salvation_army_signup_development
+
+test:
+  adapter: postgresql
+  database: salvation_army_signup_test
