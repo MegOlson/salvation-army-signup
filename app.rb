@@ -12,7 +12,15 @@ get('/') do
   erb(:index)
 end
 
-post('/') do
-  @volunteers = Volunteer.all();
-  erb(:success)
+post('/volunteer') do
+  @name = params["name"]
+  if !@name.empty?
+    @volunteer = Volunteer.new({name: @name})
+    @volunteer.save
+  end
+  erb(:sucess)
 end
+
+get('/volunteers/:id') do {
+  erb()
+}
