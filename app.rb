@@ -20,7 +20,3 @@ post('/volunteer') do
   end
   erb(:sucess)
 end
-
-get('/volunteers/:id') do {
-  erb()
-}
