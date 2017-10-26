@@ -1,7 +1,19 @@
-<h3>Welcome to Plateau Outreach Ministries Salvation Army Signup</h3>
-<h4>Click on a date to signup to ring the Salvation Army Bell</h4>
-<h5><em>No more than two volunteers per day</em></h5>
+<form action="/volunteer" method="post" class= "form-group">
+  <label for="name">Full Name</label>
+  <input id="name" type="text" name="name" class="form-control"><br>
+  <label for="date" class="date">Date</label>
+  <input class="form-control" type="date" id="date"><br>
+  <button type="submit" class="btn">Add</button>
+</form>
 
-<%= month_calendar do |date| %>
-  <%= date %>
+
+<h3>Volunteers:</h3>
+<% if @volunteers.any? %>
+  <% @volunteers.each do |volunteer| %>
+    <ul>
+      <li><a href="/volunteers/<%= volunteer.id %>"><%= volunteer.name %></a></li>
+    </ul>
+  <% end %>
+<% else %>
+  <p>There are no volunteers yet.</p>
 <% end %>
