@@ -18,12 +18,7 @@ _A program that allows community members to signup for a date to ring Salvation 
 
 ## Specifications
 
-* Program will return inputted store name.
-  * Example Input: "Nordstrom"
-  * Example Output: "Nordstrom"
-* Program will return inputted brand name.
-  * Example Input: "Nike"
-  * Example Output: "Nike"
+
 
 ## Support and contact details
 
