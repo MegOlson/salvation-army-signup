@@ -1,0 +1,6 @@
+<h3><%= @volunteer.name %></h3>
+
+<form class="form-group" action="/volunteers/<%= @volunteer.id %>/delete" method="post">
+  <input type="hidden" name="_method" value="delete" class="form-control">
+  <button type="submit" name="button" class="btn" id="delete">Delete Volunteer</button>
+</form>

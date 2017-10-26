@@ -2,7 +2,7 @@
   <label for="name">Full Name</label>
   <input id="name" type="text" name="name" class="form-control"><br>
   <label for="date" class="date">Date</label>
-  <input class="form-control" type="date" id="date"><br>
+  <input class="form-control" name="date" type="date" id="date"><br>
   <button type="submit" class="btn">Add</button>
 </form>
 
@@ -11,7 +11,10 @@
 <% if @volunteers.any? %>
   <% @volunteers.each do |volunteer| %>
     <ul>
-      <li><a href="/volunteers/<%= volunteer.id %>"><%= volunteer.name %></a></li>
+      <li>
+        Volunteer: <a href="/volunteers/<%= volunteer.id %>"><%= volunteer.name %></a>
+        <p>Date: <%=volunteer.date%> </p>
+      </li>
     </ul>
   <% end %>
 <% else %>
