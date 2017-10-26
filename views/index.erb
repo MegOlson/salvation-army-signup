@@ -1,8 +1,8 @@
 <form action="/volunteer" method="post" class= "form-group">
   <label for="name">Full Name</label>
-  <input id="name" type="text" name="name" class="form-control"><br>
-  <label for="date" class="date">Date</label>
-  <input class="form-control" name="date" type="date" id="date"><br>
+  <input id="name" type="text" name="name" required class="form-control"><br>
+  <label for="date" class="date" required>Date</label>
+  <input class="form-control" name="date" minDate="2017-10-20" maxDate="2017-12-31"type="date" id="date"><br>
   <button type="submit" class="btn">Add</button>
 </form>
 
@@ -13,7 +13,7 @@
     <ul>
       <li>
         Volunteer: <a href="/volunteers/<%= volunteer.id %>"><%= volunteer.name %></a>
-        <p>Date: <%=volunteer.date%> </p>
+        <p>Date: <%= volunteer.date %> </p>
       </li>
     </ul>
   <% end %>
