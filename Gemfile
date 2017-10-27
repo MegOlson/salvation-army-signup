@@ -11,5 +11,4 @@ gem "simple_calendar", "~> 2.0"
 group(:test) do
   gem 'rspec'
   gem 'capybara', '~> 2.8'
-  gem 'pry'
 end

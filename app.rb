@@ -2,7 +2,6 @@ require('sinatra')
 require("sinatra/activerecord")
 require('sinatra/reloader')
 require('./lib/volunteer')
-require('pry')
 also_reload('lib/**/*.rb')
 require("pg")
 
