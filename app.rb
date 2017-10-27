@@ -19,7 +19,7 @@ post '/volunteer' do
     @volunteer = Volunteer.new({name: @name, date: @date})
     @volunteer.save
   end
-  erb(:sucess)
+  erb(:success)
 end
 
 get '/volunteers' do
