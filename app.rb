@@ -15,12 +15,12 @@ end
 post '/volunteer' do
   @name = params["name"]
   @date = params["date"]
-  if !@name.empty? || !@date.empty?
+  if Volunteer.exists?(date: @date)
+    erb(:error)
+  else
     @volunteer = Volunteer.new({name: @name, date: @date})
     @volunteer.save
     erb(:success)
-  elsif Volunteer.exists(date: @date)
-    erb(:error)
   end
 end
 
