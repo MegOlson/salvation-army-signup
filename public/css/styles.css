@@ -1,6 +1,6 @@
 .jumbotron {
   height: 160px;
-  background-color: rgba(238, 238, 238, 0.43);
+  background-color: rgba(238, 238, 238, 0.55);
 }
 
 .navbar {
@@ -24,4 +24,9 @@ body {
 
 a {
   color: red;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
 }
