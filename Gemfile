@@ -10,5 +10,6 @@ gem "simple_calendar", "~> 2.0"
 
 group(:test) do
   gem 'rspec'
+  gem 'pry'
   gem 'capybara', '~> 2.8'
 end
