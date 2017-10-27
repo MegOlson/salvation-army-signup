@@ -8,12 +8,11 @@ require("pg")
 
 DB = PG.connect({:dbname => "salvation_army_signup_test"})
 
-get('/') do
-  @volunteers = Volunteer.all();
+get '/' do
   erb(:index)
 end
 
-post('/volunteer') do
+post '/volunteer' do
   @name = params["name"]
   @date = params["date"]
   if !@name.empty? || !@date.empty?
@@ -23,7 +22,12 @@ post('/volunteer') do
   erb(:sucess)
 end
 
-get('/volunteers/:id') do
+get '/volunteers' do
+  @volunteers = Volunteer.all()
+  erb(:volunteers)
+end
+
+get '/volunteers/:id' do
   @volunteer = Volunteer.find(params[:id])
   erb(:volunteer)
 end
@@ -32,4 +36,8 @@ delete "/volunteers/:id/delete" do
   @volunteer = Volunteer.find(params[:id])
   @volunteer.delete
   redirect "/"
+end
+
+get '/about' do
+  erb(:about)
 end

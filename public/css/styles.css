@@ -1,27 +1,14 @@
 .jumbotron {
-  text-align: center;
+  height: 160px;
 }
 
-.simple-calendar {
-  .day {}
+.navbar {
+  float: right;
+  margin-top: 7%;
+}
 
-  .wday-0 {}
-  .wday-1 {}
-  .wday-2 {}
-  .wday-3 {}
-  .wday-4 {}
-  .wday-5 {}
-  .wday-6 {}
-
-  .today {}
-  .past {}
-  .future {}
-
-  .start-date {}
-
-  .prev-month {}
-  .next-month { }
-  .current-month {}
-
-  .has-events {}
+.bar{
+  color: black;
+  margin: 5px;
+  font-size: 14px;
 }
