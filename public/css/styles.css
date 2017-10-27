@@ -1,9 +1,6 @@
-.body {
-  font-family: 'Short Stack', cursive;
-}
-
 .jumbotron {
   height: 160px;
+  background-color: rgba(238, 238, 238, 0.43);
 }
 
 .navbar {
@@ -15,4 +12,16 @@
   color: black;
   margin: 5px;
   font-size: 14px;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  background-image: url("../img/sideXmas.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+a {
+  color: red;
 }
