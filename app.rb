@@ -18,8 +18,10 @@ post '/volunteer' do
   if !@name.empty? || !@date.empty?
     @volunteer = Volunteer.new({name: @name, date: @date})
     @volunteer.save
+    erb(:success)
+  elsif Volunteer.exists(date: @date)
+    erb(:error)
   end
-  erb(:success)
 end
 
 get '/volunteers' do

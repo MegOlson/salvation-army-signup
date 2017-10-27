@@ -1,5 +1,6 @@
 class Volunteer < ActiveRecord::Base
-  validates(:name, {:presence => true, :length => { :maximum => 30 }})
+  validates :name, {:presence => true, :length => { :maximum => 30 }}
+  validates :date, uniqueness: true
   # before_save(:format_date)
   #
   # def format_date
