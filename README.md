@@ -11,7 +11,7 @@ _A program that allows community members to signup for a date to ring Salvation 
 ## Setup/Installation Requirements
 
 * Clone this repository
-* Open file salvation_army_signu[]
+* Open file salvation_army_signup
 * Copy database using ActiveRecord
 * Run ruby app.rb to open the app in Sinatra
 * Open your preferred browser and go to 'localhost:4567' to view project
